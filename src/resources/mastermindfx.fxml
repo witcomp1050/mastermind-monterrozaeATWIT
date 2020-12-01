@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="526.0" prefWidth="539.0" style="-fx-background-color: #36454f;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+    <Button fx:id="checkButton" layoutX="476.0" layoutY="32.0" mnemonicParsing="false" onMouseClicked="#check" text="Check" />
+    <Text fx:id="mastermindText" fill="WHITE" layoutX="260.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mastermind" wrappingWidth="107.58587646484375">
+        <font>
+            <Font name="Candara" size="21.0" />
+        </font>
+    </Text>
+    <Button fx:id="redButton" layoutX="416.0" layoutY="85.0" maxHeight="40.0" maxWidth="40.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" onMouseClicked="#onClickedEventRed" prefHeight="24.0" prefWidth="30.0" style="-fx-background-color: RED; -fx-background-radius: 40em;" textFill="RED" textOverrun="CLIP" />
+    <Button fx:id="yellowButton" layoutX="415.0" layoutY="149.0" maxHeight="40.0" maxWidth="40.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" onMouseClicked="#onClickedEventYellow" prefHeight="24.0" prefWidth="30.0" style="-fx-background-color: yellow; -fx-background-radius: 40em;" textFill="RED" textOverrun="CLIP" />
+    <Button fx:id="greenButton" layoutX="415.0" layoutY="213.0" maxHeight="40.0" maxWidth="40.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" onMouseClicked="#onClickedEventGreen" prefHeight="24.0" prefWidth="30.0" style="-fx-background-color: green; -fx-background-radius: 40em;" textFill="RED" textOverrun="CLIP" />
+    <Button fx:id="blueButton" layoutX="414.0" layoutY="277.0" maxHeight="40.0" maxWidth="40.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" onMouseClicked="#onClickedEventBlue" prefHeight="24.0" prefWidth="30.0" style="-fx-background-color: blue; -fx-background-radius: 40em;" textFill="RED" textOverrun="CLIP" />
+    <Button fx:id="orangeButton" layoutX="413.0" layoutY="341.0" maxHeight="40.0" maxWidth="40.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" onMouseClicked="#onClickedEventOrange" prefHeight="24.0" prefWidth="30.0" style="-fx-background-color: orange; -fx-background-radius: 40em;" textFill="RED" textOverrun="CLIP" />
+    <Button fx:id="blackButton" layoutX="413.0" layoutY="404.0" maxHeight="40.0" maxWidth="40.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" onMouseClicked="#onClickedEventBlack" prefHeight="24.0" prefWidth="30.0" style="-fx-background-color: black; -fx-background-radius: 40em;" textFill="RED" textOverrun="CLIP" />
+    <Button fx:id="closeButton" mnemonicParsing="false" onMouseClicked="#exit" text="Exit" />
+    <HBox layoutX="63.0" layoutY="422.0" prefHeight="40.0" prefWidth="210.0">
+        <children>
+            <Circle fx:id="firstCircleSR" fill="#e5dada" onMouseClicked="#reset10" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="secondCircleSR" fill="#e5dada" layoutX="32.0" layoutY="32.0" onMouseClicked="#reset11" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="thirdCircleSR" fill="#e5dada" onMouseClicked="#reset12" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="fourthCircleSR" fill="#e5dada" onMouseClicked="#reset13" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+        </children>
+    </HBox>
+    <HBox layoutX="63.0" layoutY="377.0" prefHeight="40.0" prefWidth="210.0">
+        <children>
+            <Circle fx:id="firstCircleTR" fill="#e5dada" onMouseClicked="#reset20" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="secondCircleTR" fill="#e5dada" layoutX="32.0" layoutY="32.0" onMouseClicked="#reset21" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="thirdCircleTR" fill="#e5dada" onMouseClicked="#reset22" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="fourthCircleTR" fill="#e5dada" onMouseClicked="#reset23" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+        </children>
+    </HBox>
+    <HBox layoutX="61.0" layoutY="332.0" prefHeight="40.0" prefWidth="210.0">
+        <children>
+            <Circle fx:id="firstCircleFR" fill="#e5dada" onMouseClicked="#reset30" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="secondCircleFR" fill="#e5dada" layoutX="32.0" layoutY="32.0" onMouseClicked="#reset31" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="thirdCircleFR" fill="#e5dada" onMouseClicked="#reset32" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="fourthCircleFR" fill="#e5dada" onMouseClicked="#reset33" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+        </children>
+    </HBox>
+    <HBox layoutX="60.0" layoutY="287.0" prefHeight="40.0" prefWidth="210.0">
+        <children>
+            <Circle fx:id="firstCircleFFR" fill="#e5dada" onMouseClicked="#reset40" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="secondCircleFFR" fill="#e5dada" layoutX="32.0" layoutY="32.0" onMouseClicked="#reset41" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="thirdCircleFFR" fill="#e5dada" onMouseClicked="#reset42" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="fourthCircleFFR" fill="#e5dada" onMouseClicked="#reset43" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+        </children>
+    </HBox>
+    <HBox layoutX="60.0" layoutY="242.0" prefHeight="40.0" prefWidth="210.0">
+        <children>
+            <Circle fx:id="firstCircleSSR" fill="#e5dada" onMouseClicked="#reset50" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="secondCircleSSR" fill="#e5dada" layoutX="32.0" layoutY="32.0" onMouseClicked="#reset51" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="thirdCircleSSR" fill="#e5dada" onMouseClicked="#reset52" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="fourthCircleSSR" fill="#e5dada" onMouseClicked="#reset53" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+        </children>
+    </HBox>
+    <HBox layoutX="60.0" layoutY="198.0" prefHeight="40.0" prefWidth="210.0">
+        <children>
+            <Circle fx:id="fss7" fill="#e5dada" onMouseClicked="#reset60" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="ss7" fill="#e5dada" layoutX="32.0" layoutY="32.0" onMouseClicked="#reset61" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="ts7" fill="#e5dada" onMouseClicked="#reset62" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="fs7" fill="#e5dada" onMouseClicked="#reset63" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+        </children>
+    </HBox>
+    <HBox layoutX="60.0" layoutY="154.0" prefHeight="40.0" prefWidth="210.0">
+        <children>
+            <Circle fx:id="fs8" fill="#e5dada" onMouseClicked="#reset70" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="ss8" fill="#e5dada" layoutX="32.0" layoutY="32.0" onMouseClicked="#reset71" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="ts8" fill="#e5dada" onMouseClicked="#reset72" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="fss8" fill="#e5dada" onMouseClicked="#reset73" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+        </children>
+    </HBox>
+    <HBox layoutX="60.0" layoutY="110.0" prefHeight="40.0" prefWidth="210.0">
+        <children>
+            <Circle fx:id="fs9" fill="#e5dada" onMouseClicked="#reset80" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="ss9" fill="#e5dada" layoutX="32.0" layoutY="32.0" onMouseClicked="#reset81" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="ts9" fill="#e5dada" onMouseClicked="#reset82" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="fss9" fill="#e5dada" onMouseClicked="#reset83" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+        </children>
+    </HBox>
+    <HBox fx:id="firstRow" layoutX="63.0" layoutY="466.0" prefHeight="40.0" prefWidth="210.0">
+        <children>
+            <Circle id="firstCircle" fx:id="firstCircle" fill="#e8dcdc" onMouseClicked="#reset" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="secondCircle" fill="#e8dcdc" layoutX="32.0" layoutY="32.0" onMouseClicked="#reset1" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="thirdCircle" fill="#e5dada" onMouseClicked="#reset2" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="fourthCircle" fill="#e5dada" onMouseClicked="#reset3" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+        </children>
+    </HBox>
+    <HBox layoutX="61.0" layoutY="63.0" prefHeight="40.0" prefWidth="210.0">
+        <children>
+            <Circle fx:id="fs101" fill="#e5dada" onMouseClicked="#reset90" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="ss101" fill="#e5dada" layoutX="32.0" layoutY="32.0" onMouseClicked="#reset91" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="ts101" fill="#e5dada" onMouseClicked="#reset92" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="fss101" fill="#e5dada" onMouseClicked="#reset93" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+        </children>
+    </HBox>
+    <Circle fx:id="firstPeg" fill="DODGERBLUE" layoutX="284.0" layoutY="477.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="secondPeg" fill="DODGERBLUE" layoutX="306.0" layoutY="477.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="thirdPeg" fill="DODGERBLUE" layoutX="284.0" layoutY="499.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="fourthPeg" fill="DODGERBLUE" layoutX="306.0" layoutY="499.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="firstPeg1" fill="DODGERBLUE" layoutX="284.0" layoutY="433.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="secondPeg1" fill="DODGERBLUE" layoutX="306.0" layoutY="433.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="thirdPeg1" fill="DODGERBLUE" layoutX="284.0" layoutY="455.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="fourthPeg1" fill="DODGERBLUE" layoutX="306.0" layoutY="455.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="firstPeg2" fill="DODGERBLUE" layoutX="284.0" layoutY="388.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="secondPeg2" fill="DODGERBLUE" layoutX="306.0" layoutY="388.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="thirdPeg2" fill="DODGERBLUE" layoutX="284.0" layoutY="410.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="fourthPeg2" fill="DODGERBLUE" layoutX="306.0" layoutY="410.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="firstPeg3" fill="DODGERBLUE" layoutX="284.0" layoutY="343.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="secondPeg3" fill="DODGERBLUE" layoutX="306.0" layoutY="343.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="thirdPeg3" fill="DODGERBLUE" layoutX="284.0" layoutY="365.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="fourthPeg3" fill="DODGERBLUE" layoutX="306.0" layoutY="365.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="firstPeg4" fill="DODGERBLUE" layoutX="284.0" layoutY="298.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="secondPeg4" fill="DODGERBLUE" layoutX="306.0" layoutY="298.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="thirdPeg4" fill="DODGERBLUE" layoutX="284.0" layoutY="320.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="fourthPeg4" fill="DODGERBLUE" layoutX="306.0" layoutY="320.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="firstPeg5" fill="DODGERBLUE" layoutX="284.0" layoutY="255.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="secondPeg5" fill="DODGERBLUE" layoutX="306.0" layoutY="255.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="thirdPeg5" fill="DODGERBLUE" layoutX="284.0" layoutY="277.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="fourthPeg5" fill="DODGERBLUE" layoutX="306.0" layoutY="277.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="firstPeg11" fill="DODGERBLUE" layoutX="284.0" layoutY="211.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="secondPeg11" fill="DODGERBLUE" layoutX="306.0" layoutY="211.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="thirdPeg11" fill="DODGERBLUE" layoutX="284.0" layoutY="233.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="fourthPeg11" fill="DODGERBLUE" layoutX="306.0" layoutY="233.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="firstPeg21" fill="DODGERBLUE" layoutX="284.0" layoutY="166.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="secondPeg21" fill="DODGERBLUE" layoutX="306.0" layoutY="166.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="thirdPeg21" fill="DODGERBLUE" layoutX="284.0" layoutY="188.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="fourthPeg21" fill="DODGERBLUE" layoutX="306.0" layoutY="188.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="firstPeg31" fill="DODGERBLUE" layoutX="284.0" layoutY="121.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="secondPeg31" fill="DODGERBLUE" layoutX="306.0" layoutY="121.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="thirdPeg31" fill="DODGERBLUE" layoutX="284.0" layoutY="143.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="fourthPeg31" fill="DODGERBLUE" layoutX="306.0" layoutY="143.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="firstPeg41" fill="DODGERBLUE" layoutX="284.0" layoutY="76.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="secondPeg41" fill="DODGERBLUE" layoutX="306.0" layoutY="76.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="thirdPeg41" fill="DODGERBLUE" layoutX="284.0" layoutY="98.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+    <Circle fx:id="fourthPeg41" fill="DODGERBLUE" layoutX="306.0" layoutY="98.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+
+</AnchorPane>
